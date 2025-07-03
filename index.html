@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mohan Kumar – Portfolio</title>
+  <title>Mohan Kumar L – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -36,7 +36,7 @@
       font-weight: 600;
     }
     section {
-      padding: 100px 2rem;
+      padding: 120px 2rem 80px;
     }
     #hero {
       display: flex;
@@ -63,13 +63,10 @@
       text-decoration: none;
       font-weight: 600;
       transition: background 0.3s;
+      display: inline-block;
     }
     .btn:hover {
       background: #f1f1f1;
-    }
-    #projects h2 {
-      text-align: center;
-      margin-bottom: 2rem;
     }
     #projects .cards {
       display: grid;
@@ -95,57 +92,49 @@
   </style>
 </head>
 <body>
+  <nav>
+    <div><strong>Mohan Kumar L</strong></div>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<nav>
-  <div><strong>Mohan Kumar</strong></div>
-  <ul>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <section id="hero">
+    <h1>Hi, I'm Mohan Kumar L</h1>
+    <p>EEE Student | IoT & Embedded Systems Enthusiast</p>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="https://example.com/Mohan_Kumar_Resume.pdf" class="btn">Download Resume</a>
+  </section>
 
-<section id="hero">
-  <h1>Hi, I'm Mohan</h1>
-  <p>EEE Student | IoT & Embedded Systems Enthusiast</p>
-  <a href="#projects" class="btn">View Projects</a>
-  <a href="https://example.com/Mohan_Kumar_Resume.pdf" class="btn">Download Resume</a>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Remote-Controlled Agriculture Bot</h3>
-      <p>ESP32 bot for ploughing, seeding & monitoring soil moisture.</p>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Audio Amplifier Circuit with PCB</h3>
+        <p><strong>Feb 2024 – Apr 2025</strong></p>
+        <p>Designed a low-noise amplifier with custom PCB. Amplifies input up to 20x.</p>
+        <a href="amplifier.html" class="btn">Click for more details</a>
+      </div>
+      <div class="card">
+        <h3>IoT-Based Smart Water Management</h3>
+        <p><strong>Mar 2025 – Apr 2025</strong></p>
+        <p>Water-level system using ESP32 & ultrasonic sensors. Auto-controls pump via Blynk IoT.</p>
+        <a href="water-management.html" class="btn">Click for more details</a>
+      </div>
     </div>
-    <div class="card">
-      <h3>IoT-Based Smart Water Management</h3>
-      <p>Monitors water levels & automates pump via Blynk IoT.</p>
-    </div>
-    <div class="card">
-      <h3>Automatic Irrigation System</h3>
-      <p>Controls irrigation with real-time soil and temperature data.</p>
-    </div>
-    <div class="card">
-      <h3>Anti-Sleep Alarm</h3>
-      <p>Eye-blink based drowsiness detection system for drivers.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a></p>
-  <p>
-    <a href="https://linkedin.com/in/mohan-kumar-l-298847306" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/mohankumar1018" target="_blank">GitHub</a>
-  </p>
-</section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a></p>
+    <p>
+      <a href="https://linkedin.com/in/mohan-kumar-l-298847306" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/mohankumar1018" target="_blank">GitHub</a>
+    </p>
+  </section>
 
-<footer>
-  © 2025 Mohan Kumar L. All rights reserved.
-</footer>
-
+  <footer>© 2025 Mohan Kumar L. All rights reserved.</footer>
 </body>
 </html>
