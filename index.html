@@ -6,16 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mohan Kumar | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
-    header { background: #222; color: #fff; padding: 1rem 2rem; }
-    h1, h2 { color: #222; }
-    .container { padding: 2rem; max-width: 900px; margin: auto; background: #fff; }
-    .section { margin-bottom: 2rem; }
-    ul { padding-left: 1.5rem; }
-    a { color: #007bff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .contact { background: #efefef; padding: 1rem; }
-    .project { margin-bottom: 1rem; }
+    body {{ font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f8f9fa; color: #333; transition: background 0.3s, color 0.3s; }}
+    header {{ background: #222; color: #fff; padding: 1rem 2rem; }}
+    h1, h2 {{ color: #222; }}
+    .container {{ padding: 2rem; max-width: 900px; margin: auto; background: #fff; }}
+    .section {{ margin-bottom: 2rem; }}
+    ul {{ padding-left: 1.5rem; }}
+    a {{ color: #007bff; text-decoration: none; }}
+    a:hover {{ text-decoration: underline; }}
+    .project {{ margin-bottom: 1rem; }}
+    .dark-mode {{ background: #121212; color: #e0e0e0; }}
+    .dark-mode .container {{ background: #1e1e1e; }}
+    .toggle-btn {{ float: right; margin-top: -2.5rem; margin-right: 1rem; }}
+    img.project-img {{ max-width: 100%; height: auto; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }}
   </style>
 </head>
 <body>
@@ -23,15 +26,21 @@
 <header>
   <h1>Mohan Kumar L</h1>
   <p>EEE Undergraduate | IoT & Embedded Systems Enthusiast</p>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 </header>
 
 <div class="container">
 
   <div class="section">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a><br>
-    Phone: +91 84948 67375<br>
-    Location: Mysuru, India</p>
+    <p>
+      Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a><br>
+      Phone: +91 84948 67375<br>
+      Location: Mysuru, India<br>
+      LinkedIn: <a href="https://linkedin.com/in/mohan-kumar-l-298847306" target="_blank">linkedin.com/in/mohan-kumar-l-298847306</a><br>
+      GitHub: <a href="https://github.com/mohankumar1018" target="_blank">github.com/mohankumar1018</a><br>
+      Resume: <a href="https://example.com/Mohan_Kumar_Resume.pdf" target="_blank">Download Resume (PDF)</a>
+    </p>
   </div>
 
   <div class="section">
@@ -44,37 +53,39 @@
 
     <div class="project">
       <strong>Remote-Controlled Agriculture Bot (Ongoing)</strong><br>
-      Designed a robot with remote-controlled ploughing, seed sowing, and soil moisture monitoring using ESP32. Recognized for innovation in smart farming solutions.
+      Designed a robot with remote-controlled ploughing, seed sowing, and soil moisture monitoring using ESP32.
+      <img class="project-img" src="https://via.placeholder.com/800x400?text=Agriculture+Bot+Image" alt="Agriculture Bot Image">
     </div>
 
     <div class="project">
       <strong>IoT-Based Smart Water Management System</strong><br>
-      Monitors water levels in real-time and controls pump automatically using ESP32 and Blynk IoT to prevent overflow and promote efficient usage.
+      Real-time water level monitoring using ESP32 + Blynk, with automatic pump control.
+      <img class="project-img" src="https://via.placeholder.com/800x400?text=Water+Management+System" alt="Water Management System">
     </div>
 
     <div class="project">
       <strong>Automatic Irrigation System</strong><br>
-      ESP32-based IoT solution that monitors soil moisture, temperature, and water level to automate irrigation remotely.
+      ESP32-based irrigation control using soil moisture and temperature sensors.
     </div>
 
     <div class="project">
       <strong>Audio Amplifier Circuit with PCB</strong><br>
-      Built and designed a compact amplifier with custom PCB, offering 20x amplification with low noise interference.
+      Designed a compact amplifier with a custom PCB for noise-free signal amplification.
     </div>
 
     <div class="project">
-      <strong>Battery Management System</strong><br>
-      Monitors battery voltage, current, and temperature in real-time using Blynk and ESP32.
+      <strong>Battery Monitoring System</strong><br>
+      Monitors voltage, current, and temperature of batteries using Blynk IoT and ESP32.
     </div>
 
     <div class="project">
       <strong>Anti-Sleep Alarm System</strong><br>
-      Eye blink sensor-based driver safety system that detects drowsiness and alerts using a buzzer.
+      Driver drowsiness alert system using eye-blink sensor and buzzer.
     </div>
 
     <div class="project">
-      <strong>Research Project (Published - Q1 Journal)</strong><br>
-      Opto-dielectric properties of Ce³⁺:Si₃Al₂Si₃O₁₂ nanocomposites for energy, lighting, anti-counterfeiting, and fingerprint detection. Published in Journal of Alloys & Compounds.
+      <strong>Research Project (Q1 Journal)</strong><br>
+      Published in Journal of Alloys & Compounds: Opto-dielectric nanocomposites for energy and security applications.
     </div>
   </div>
 
@@ -93,7 +104,7 @@
       <li>C and Python Competitive Training – VVCE (2025)</li>
       <li>MATLAB Circuit Simulink On Ramp (2024)</li>
       <li>Build Your Own Robot Workshop (2023)</li>
-      <li>Leadership Training & Hackathon Participation (CREAT-A-THON 2024)</li>
+      <li>Leadership Training & Hackathon (CREAT-A-THON 2024)</li>
     </ul>
   </div>
 
@@ -109,12 +120,18 @@
   <div class="section">
     <h2>Volunteer & Mentoring</h2>
     <ul>
-      <li>NSS Camps & Hackathons (Haxerve 2.0, Smart Campus Hackathon)</li>
-      <li>Mentor – Embedded Systems, PCB Design, and Robotics Workshops</li>
+      <li>NSS Camps & Hackathons (Haxerve 2.0, Smart Campus)</li>
+      <li>Mentor – Embedded Systems, PCB Design, Robotics Workshops</li>
     </ul>
   </div>
 
 </div>
+
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
