@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Smart Water Management System</title>
+  <title>IoT-Based Smart Water Management</title>
   <style>
-    body { font-family: Poppins, sans-serif; background: #f8f8f8; padding: 2rem; color: #2c2c2c; }
-    .container { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 8px; }
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      background: #f8f8f8;
+      color: #2c2c2c;
+      padding: 2rem;
+    }
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: contain;
+      height: 300px;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      animation: fadeSlide 1.2s ease-in-out;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 20px;
+      animation: slideFadeIn 1.2s ease-in-out;
+    }
     a { color: #007bff; text-decoration: none; }
     h1 { color: #222; }
+
+    @keyframes slideFadeIn {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
+  <div class="banner"></div>
   <div class="container">
     <h1>IoT-Based Smart Water Management System</h1>
     <p><strong>Mar 2025 – Apr 2025</strong></p>
     <p>
-      Implemented a smart water level monitoring system that uses an ultrasonic sensor and ESP32 to track water levels in real-time.
-      Integrated with Blynk IoT, the system automatically controls a pump to prevent overflow or depletion, promoting efficient water usage.
+      Implemented a smart water level monitoring system using an ESP32 and ultrasonic sensor to track water tank levels in real time. The system automatically activates a submersible pump when the tank reaches a critical level.
+    </p>
+    <p>
+      Integrated with the Blynk IoT platform to enable remote monitoring and control through a mobile app, enhancing water usage efficiency and helping prevent both overflow and depletion.
     </p>
     <a href="index.html">← Back to Portfolio</a>
   </div>

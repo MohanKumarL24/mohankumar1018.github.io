@@ -9,8 +9,18 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      color: #2c2c2c;
       background: linear-gradient(to right, #ff7e5f, #feb47b);
+      color: #2c2c2c;
+    }
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: contain;
+      height: 300px;
+      border-radius: 20px;
+      margin: 1.5rem auto;
+      max-width: 90%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      animation: fadeSlide 1.2s ease-in-out;
     }
     nav {
       display: flex;
@@ -18,10 +28,11 @@
       align-items: center;
       padding: 1rem 2rem;
       background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       position: fixed;
       width: 100%;
+      top: 0;
       z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     nav ul {
       list-style: none;
@@ -36,23 +47,17 @@
       font-weight: 600;
     }
     section {
-      padding: 120px 2rem 80px;
+      padding: 140px 2rem 80px;
     }
     #hero {
-      background-image: url('banner.jpg');
-      background-size: cover;
-      background-position: center;
-      padding: 120px 2rem;
-      color: white;
       text-align: center;
-      text-shadow: 1px 1px 4px #000;
     }
     #hero h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
     }
     #hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     .btn {
       margin: 1rem 0.5rem;
@@ -64,7 +69,6 @@
       text-decoration: none;
       font-weight: 600;
       transition: background 0.3s;
-      display: inline-block;
     }
     .btn:hover {
       background: #f1f1f1;
@@ -76,19 +80,23 @@
     }
     .card {
       background: #ffffffcc;
-      border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
     footer {
       text-align: center;
       padding: 2rem;
-      background: rgba(255, 255, 255, 0.7);
+      background: rgba(255, 255, 255, 0.6);
+    }
+    @keyframes fadeSlide {
+      0% { transform: translateY(-20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
@@ -103,11 +111,13 @@
   </ul>
 </nav>
 
+<div class="banner"></div>
+
 <section id="hero">
   <h1>Hi, I'm Mohan Kumar L</h1>
   <p>EEE Student | IoT & Embedded Systems Enthusiast</p>
   <a href="#projects" class="btn">View Projects</a>
-  <a href="https://example.com/Mohan_Kumar_Resume.pdf" class="btn">Download Resume</a>
+  <a href="Mohan_Kumar_Resume.pdf" class="btn">Download Resume</a>
 </section>
 
 <section id="projects">

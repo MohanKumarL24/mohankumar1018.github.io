@@ -3,19 +3,49 @@
 <head>
   <title>Audio Amplifier Circuit with PCB</title>
   <style>
-    body { font-family: Poppins, sans-serif; background: #f8f8f8; padding: 2rem; color: #2c2c2c; }
-    .container { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 8px; }
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      background: #f8f8f8;
+      color: #2c2c2c;
+      padding: 2rem;
+    }
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: contain;
+      height: 300px;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      animation: fadeSlide 1.2s ease-in-out;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 20px;
+      animation: slideFadeIn 1.2s ease-in-out;
+    }
     a { color: #007bff; text-decoration: none; }
     h1 { color: #222; }
+
+    @keyframes slideFadeIn {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
+  <div class="banner"></div>
   <div class="container">
     <h1>Audio Amplifier Circuit with PCB</h1>
     <p><strong>Feb 2024 – Apr 2025</strong></p>
     <p>
-      Developed an audio amplifier circuit that amplifies input signals up to 20 times with minimal noise interference.
-      A custom PCB layout was designed and fabricated to ensure compact and efficient performance.
+      Developed a compact and efficient audio amplifier circuit using the LM386 IC, capable of amplifying low-level audio signals by up to 20 times while keeping noise levels minimal. The amplifier is suitable for portable speaker projects and basic audio experiments.
+    </p>
+    <p>
+      A custom PCB layout was designed, fabricated, and tested to ensure reliable performance in embedded audio systems. The PCB helped reduce wiring clutter and improved the overall signal integrity.
     </p>
     <a href="index.html">← Back to Portfolio</a>
   </div>

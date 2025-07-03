@@ -3,21 +3,49 @@
 <head>
   <title>Remote-Controlled Agriculture Bot</title>
   <style>
-    body { font-family: Poppins, sans-serif; background: #f8f8f8; padding: 2rem; color: #2c2c2c; }
-    .container { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 8px; }
+    body {
+      margin: 0;
+      font-family: Poppins, sans-serif;
+      background: #f8f8f8;
+      color: #2c2c2c;
+      padding: 2rem;
+    }
+    .banner {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: contain;
+      height: 300px;
+      border-radius: 20px;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      animation: fadeSlide 1.2s ease-in-out;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 20px;
+      animation: slideFadeIn 1.2s ease-in-out;
+    }
     a { color: #007bff; text-decoration: none; }
     h1 { color: #222; }
+
+    @keyframes slideFadeIn {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
+  <div class="banner"></div>
   <div class="container">
     <h1>Remote-Controlled Agriculture Bot</h1>
     <p><strong>2025</strong></p>
     <p>
-      This ESP32-based robot is designed to assist farmers in fieldwork operations such as ploughing, seed sowing, and monitoring soil moisture. The bot features remote control functionality through Bluetooth or Wi-Fi, allowing it to be operated manually over long distances. It incorporates an MG996R servo motor for ploughing, a seed/fertilizer dispensing system powered by MG92 servo, and real-time feedback from soil sensors. This smart bot reduces manual labor and improves crop planting efficiency.
+      This ESP32-based robot is designed to assist farmers in fieldwork operations such as ploughing, seed sowing, and monitoring soil moisture. The bot features remote control functionality through Bluetooth or Wi-Fi, allowing it to be operated manually over long distances. It incorporates an MG996R servo motor for ploughing, a seed/fertilizer dispensing system powered by MG92 servo, and real-time feedback from soil sensors.
     </p>
     <p>
-      The robot's structure is compact and designed for rough terrain. It was successfully tested in small crop fields and performs well under moderate field conditions. Future iterations may include GPS navigation and solar-powered charging modules.
+      The robot is compact and performs well on rough terrain. Future improvements may include GPS navigation and solar power integration.
     </p>
     <a href="index.html">← Back to Portfolio</a>
   </div>
