@@ -31,21 +31,26 @@
     h1 { color: #222; }
 
     @keyframes slideFadeIn {
-      0% { transform: translateY(30px); opacity: 0; }
-      100% { transform: translateY(0); opacity: 1; }
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="banner"></div>
   <div class="container">
     <h1>Anti-Sleep Alarm</h1>
     <p><strong>2024</strong></p>
     <p>
-      Based on Arduino Nano and an IR eye blink sensor, this project detects drowsiness in drivers and triggers a buzzer to alert them. It’s compact, wearable, and useful for long-distance driving.
+      This safety system helps prevent road accidents caused by drowsiness in drivers. It is based on an Arduino Nano and an IR eye blink sensor that monitors the driver's eye movements. If prolonged eye closure is detected (indicating sleepiness), the system immediately activates a buzzer to alert the driver.
     </p>
     <p>
-      It helps prevent accidents and can be further enhanced with GSM for emergency SMS alerts.
+      The device is lightweight, wearable, and can be installed inside a vehicle. It is especially useful for truck and cab drivers who frequently drive long distances. Further upgrades may include GSM modules for emergency alert systems.
     </p>
     <a href="index.html">← Back to Portfolio</a>
   </div>
