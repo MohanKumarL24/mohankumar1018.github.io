@@ -1,137 +1,143 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mohan Kumar | Portfolio</title>
+  <title>Mohan Kumar – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {{ font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f8f9fa; color: #333; transition: background 0.3s, color 0.3s; }}
-    header {{ background: #222; color: #fff; padding: 1rem 2rem; }}
-    h1, h2 {{ color: #222; }}
-    .container {{ padding: 2rem; max-width: 900px; margin: auto; background: #fff; }}
-    .section {{ margin-bottom: 2rem; }}
-    ul {{ padding-left: 1.5rem; }}
-    a {{ color: #007bff; text-decoration: none; }}
-    a:hover {{ text-decoration: underline; }}
-    .project {{ margin-bottom: 1rem; }}
-    .dark-mode {{ background: #121212; color: #e0e0e0; }}
-    .dark-mode .container {{ background: #1e1e1e; }}
-    .toggle-btn {{ float: right; margin-top: -2.5rem; margin-right: 1rem; }}
-    img.project-img {{ max-width: 100%; height: auto; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px; }}
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #2c2c2c;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2c2c2c;
+      font-weight: 600;
+    }
+    section {
+      padding: 100px 2rem;
+    }
+    #hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 100vh;
+      color: #2c2c2c;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    #hero p {
+      font-size: 1.2rem;
+    }
+    .btn {
+      margin: 1rem 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #fff;
+      color: #2c2c2c;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #f1f1f1;
+    }
+    #projects .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #ffffffcc;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #2c2c2c;
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Mohan Kumar L</h1>
-  <p>EEE Undergraduate | IoT & Embedded Systems Enthusiast</p>
-  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-</header>
+<nav>
+  <div><strong>Mohan Kumar</strong></div>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<div class="container">
+<section id="hero">
+  <h1>Hi, I'm Mohan</h1>
+  <p>EEE Student | IoT & Embedded Systems Enthusiast</p>
+  <a href="#projects" class="btn">View Projects</a>
+  <a href="https://example.com/Mohan_Kumar_Resume.pdf" class="btn">Download Resume</a>
+</section>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>
-      Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a><br>
-      Phone: +91 84948 67375<br>
-      Location: Mysuru, India<br>
-      LinkedIn: <a href="https://linkedin.com/in/mohan-kumar-l-298847306" target="_blank">linkedin.com/in/mohan-kumar-l-298847306</a><br>
-      GitHub: <a href="https://github.com/mohankumar1018" target="_blank">github.com/mohankumar1018</a><br>
-      Resume: <a href="https://example.com/Mohan_Kumar_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Career Objective</h2>
-    <p>Enthusiastic EEE student passionate about IoT and Embedded Systems. Enjoys solving problems, building smart agricultural projects, and learning new skills through teamwork and real-world engineering experiences.</p>
-  </div>
-
-  <div class="section">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <strong>Remote-Controlled Agriculture Bot (Ongoing)</strong><br>
-      Designed a robot with remote-controlled ploughing, seed sowing, and soil moisture monitoring using ESP32.
-      <img class="project-img" src="https://via.placeholder.com/800x400?text=Agriculture+Bot+Image" alt="Agriculture Bot Image">
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Remote-Controlled Agriculture Bot</h3>
+      <p>ESP32 bot for ploughing, seeding & monitoring soil moisture.</p>
     </div>
-
-    <div class="project">
-      <strong>IoT-Based Smart Water Management System</strong><br>
-      Real-time water level monitoring using ESP32 + Blynk, with automatic pump control.
-      <img class="project-img" src="https://via.placeholder.com/800x400?text=Water+Management+System" alt="Water Management System">
+    <div class="card">
+      <h3>IoT-Based Smart Water Management</h3>
+      <p>Monitors water levels & automates pump via Blynk IoT.</p>
     </div>
-
-    <div class="project">
-      <strong>Automatic Irrigation System</strong><br>
-      ESP32-based irrigation control using soil moisture and temperature sensors.
+    <div class="card">
+      <h3>Automatic Irrigation System</h3>
+      <p>Controls irrigation with real-time soil and temperature data.</p>
     </div>
-
-    <div class="project">
-      <strong>Audio Amplifier Circuit with PCB</strong><br>
-      Designed a compact amplifier with a custom PCB for noise-free signal amplification.
-    </div>
-
-    <div class="project">
-      <strong>Battery Monitoring System</strong><br>
-      Monitors voltage, current, and temperature of batteries using Blynk IoT and ESP32.
-    </div>
-
-    <div class="project">
-      <strong>Anti-Sleep Alarm System</strong><br>
-      Driver drowsiness alert system using eye-blink sensor and buzzer.
-    </div>
-
-    <div class="project">
-      <strong>Research Project (Q1 Journal)</strong><br>
-      Published in Journal of Alloys & Compounds: Opto-dielectric nanocomposites for energy and security applications.
+    <div class="card">
+      <h3>Anti-Sleep Alarm</h3>
+      <p>Eye-blink based drowsiness detection system for drivers.</p>
     </div>
   </div>
+</section>
 
-  <div class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li>ESP32, Arduino, Embedded Systems, IoT</li>
-      <li>MATLAB, Proteus, Circuit Design, PCB Design</li>
-      <li>C, Embedded C, Problem Solving</li>
-    </ul>
-  </div>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a></p>
+  <p>
+    <a href="https://linkedin.com/in/mohan-kumar-l-298847306" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/mohankumar1018" target="_blank">GitHub</a>
+  </p>
+</section>
 
-  <div class="section">
-    <h2>Certifications & Trainings</h2>
-    <ul>
-      <li>C and Python Competitive Training – VVCE (2025)</li>
-      <li>MATLAB Circuit Simulink On Ramp (2024)</li>
-      <li>Build Your Own Robot Workshop (2023)</li>
-      <li>Leadership Training & Hackathon (CREAT-A-THON 2024)</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Achievements</h2>
-    <ul>
-      <li>1st Prize – State-level project competition "Vriddheee"</li>
-      <li>Best Student for Co-Curricular Activities – 2025</li>
-      <li>1st Rank – 4th semester (SGPA 9.6)</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Volunteer & Mentoring</h2>
-    <ul>
-      <li>NSS Camps & Hackathons (Haxerve 2.0, Smart Campus)</li>
-      <li>Mentor – Embedded Systems, PCB Design, Robotics Workshops</li>
-    </ul>
-  </div>
-
-</div>
-
-<script>
-function toggleDarkMode() {
-  document.body.classList.toggle("dark-mode");
-}
-</script>
+<footer>
+  © 2025 Mohan Kumar L. All rights reserved.
+</footer>
 
 </body>
 </html>
