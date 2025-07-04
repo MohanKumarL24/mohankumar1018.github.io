@@ -1,118 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mohan Kumar L – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #ff7e5f, #feb47b);
-      color: #2c2c2c;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      background: rgba(255, 255, 255, 0.9);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1rem;
-      margin: 0;
-      padding: 0;
-    }
-    nav a {
-      text-decoration: none;
-      color: #2c2c2c;
-      font-weight: 600;
-    }
-    section {
-      padding: 140px 2rem 80px;
-    }
-    #hero {
-      background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1950&q=80');
-      background-size: cover;
-      background-position: center;
-      padding: 120px 2rem;
-      color: white;
-      text-align: center;
-      text-shadow: 1px 1px 4px #000;
-    }
-    #hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-    #hero p {
-      font-size: 1.1rem;
-    }
-    .btn {
-      margin: 1rem 0.5rem;
-      padding: 0.75rem 1.5rem;
-      background: #fff;
-      color: #2c2c2c;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    .btn:hover {
-      background: #f1f1f1;
-    }
-    #projects .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .card {
-      background: #ffffffcc;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    }
-    .card a {
-      text-decoration: underline;
-      font-weight: 600;
-      color: #2c2c2c;
-      transition: color 0.3s;
-    }
-    .card a:hover {
+
+    a:hover {
       color: #444;
     }
     .social-icons {
       font-size: 1.5rem;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
     .social-icons a {
       margin: 0 0.5rem;
       color: #2c2c2c;
+      transition: color 0.3s;
     }
-    .social-icons img {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
+    .social-icons a:hover {
+      color: #444;
     }
-    footer {
+    #skills .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    #skills .card {
+      background: #ffffffcc;
+      border-radius: 12px;
+      padding: 1rem;
       text-align: center;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.6);
+      font-weight: 600;
+      transition: transform 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
-  </style>
+    #skills .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    #extracurricular ul {
+      list-style: disc;
+      padding-left: 2rem;
+    }
+    #extracurricular li {
+      margin-bottom: 0.5rem;
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #certifications .timeline {
+      padding-left: 2rem;
+      list-style: square;
+    }
+    #certifications .timeline li {
+      margin-bottom: 0.5rem;
+      animation: fadeIn 0.6s ease-in;
+    }
+</style>
 </head>
 <body>
 
@@ -139,57 +82,89 @@
       <h3>Audio Amplifier Circuit with PCB</h3>
       <p><strong>Feb 2024 – Apr 2025</strong></p>
       <p>Low-noise amplifier with 20x gain and custom PCB design.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="amplifier.html">View More Details</a></div>
+      <div style="text-align: right; margin-top: 1rem;"><a href="amplifier.html" style="text-decoration: none; font-weight: 600; color: #2c2c2c;">View More Details</a></div>
     </div>
     <div class="card">
       <h3>IoT-Based Smart Water Management</h3>
       <p><strong>Mar 2025 – Apr 2025</strong></p>
       <p>ESP32 system tracks tank levels & auto-controls pump via Blynk.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="water-management.html">View More Details</a></div>
+      <div style="text-align: right; margin-top: 1rem;"><a href="water-management.html" style="text-decoration: none; font-weight: 600; color: #2c2c2c;">View More Details</a></div>
     </div>
     <div class="card">
       <h3>Remote-Controlled Agriculture Bot</h3>
       <p><strong>2025</strong></p>
       <p>ESP32 robot with ploughing, seeding, and real-time soil feedback.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="agriculture-bot.html">View More Details</a></div>
+      <div style="text-align: right; margin-top: 1rem;"><a href="agriculture-bot.html" style="text-decoration: underline; font-weight: 600; color: #2c2c2c; transition: color 0.3s;">View More Details</a></div>
     </div>
     <div class="card">
       <h3>Automatic Irrigation System</h3>
       <p><strong>2025</strong></p>
       <p>IoT system with soil moisture & temp sensors to auto-control pump.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="irrigation-system.html">View More Details</a></div>
+      <div style="text-align: right; margin-top: 1rem;"><a href="irrigation-system.html" style="text-decoration: underline; font-weight: 600; color: #2c2c2c; transition: color 0.3s;">View More Details</a></div>
     </div>
     <div class="card">
       <h3>Anti-Sleep Alarm</h3>
       <p><strong>2024</strong></p>
       <p>Arduino-based drowsiness detection using IR eye blink sensor.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="anti-sleep-alarm.html">View More Details</a></div>
+      <div style="text-align: right; margin-top: 1rem;"><a href="anti-sleep-alarm.html" style="text-decoration: underline; font-weight: 600; color: #2c2c2c; transition: color 0.3s;">View More Details</a></div>
     </div>
     <div class="card">
       <h3>Battery Monitoring System</h3>
       <p><strong>2024</strong></p>
       <p>ESP32 monitors battery stats & streams data to Blynk IoT dashboard.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="battery-monitor.html">View More Details</a></div>
+      <div style="text-align: right; margin-top: 1rem;"><a href="battery-monitor.html" style="text-decoration: underline; font-weight: 600; color: #2c2c2c; transition: color 0.3s;">View More Details</a></div>
     </div>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <div class="social-icons">
-    <a href="https://linkedin.com/in/mohan024" target="_blank" title="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
-    </a>
-    <a href="https://github.com/mohankumar1018" target="_blank" title="GitHub">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
-    </a>
-    <a href="mailto:mohankumarl1018@gmail.com" title="Email">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
-    </a>
-  </div>
+<div class="social-icons">
+  <a href="https://linkedin.com/in/mohan024" target="_blank" title="LinkedIn">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="30" height="30">
+  </a>
+  <a href="https://github.com/mohankumar1018" target="_blank" title="GitHub">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="30" height="30">
+  </a>
+  <a href="mailto:mohankumarl1018@gmail.com" title="Email">
+    <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail" width="30" height="30">
+  </a>
+</div>
   <p>Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a></p>
+  <p>
+    <a href="https://linkedin.com/in/mohan-kumar-l-298847306" target="_blank">LinkedIn</a> |
+    <a href="https://github.com/mohankumar1018" target="_blank">GitHub</a>
+  </p>
 </section>
 
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="cards">
+    <div class="card">Embedded Systems</div>
+    <div class="card">IoT with ESP32</div>
+    <div class="card">Arduino Programming</div>
+    <div class="card">PCB Design</div>
+    <div class="card">MATLAB & Simulink</div>
+    <div class="card">C Programming</div>
+  </div>
+</section>
+
+<section id="extracurricular">
+  <h2>Extracurricular Activities</h2>
+  <ul>
+    <li>Participated in national-level hackathon at Dayananda Sagar College of Engineering</li>
+    <li>Volunteered for Smart India Hackathon 2023</li>
+    <li>Attended workshops on Robotics and Embedded IoT Systems</li>
+    <li>Published research in Journal of Alloys & Compounds (Q1)</li>
+  </ul>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul class="timeline">
+    <li><strong>Embedded Systems Workshop</strong> – Pantech eLearning, 2023</li>
+    <li><strong>Introduction to IoT</strong> – NPTEL, 2023</li>
+    <li><strong>PCB Design & Fabrication</strong> – EduSkills, 2022</li>
+    <li><strong>MATLAB Onramp</strong> – MathWorks, 2022</li>
+  </ul>
 <footer>
   © 2025 Mohan Kumar L. All rights reserved.
 </footer>
