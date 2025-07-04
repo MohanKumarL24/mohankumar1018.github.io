@@ -1,22 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    a:hover {
-      color: #444;
-    }
-    .social-icons {
-      font-size: 1.5rem;
-      margin-top: 0.5rem;
-    }
-    .social-icons a {
-      margin: 0 0.5rem;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mohan Kumar L – Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
       color: #2c2c2c;
-      transition: color 0.3s;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
     }
-    .social-icons a:hover {
-      color: #444;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 10;
     }
-</style>
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #2c2c2c;
+      font-weight: 600;
+    }
+    section {
+      padding: 120px 2rem 80px;
+    }
+    #hero {
+      background-image: url('https://img.freepik.com/free-photo/beautiful-skyscape-daytime_23-2149309642.jpg?w=1480');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 2rem;
+      color: white;
+      text-align: center;
+      text-shadow: 1px 1px 4px #000;
+    }
+    #hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    #hero p {
+      font-size: 1.2rem;
+    }
+    .btn {
+      margin: 1rem 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #fff;
+      color: #2c2c2c;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #f1f1f1;
+    }
+    #projects .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #ffffffcc;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.7);
+    }
+  </style>
 </head>
 <body>
 
@@ -33,56 +107,60 @@
   <h1>Hi, I'm Mohan Kumar L</h1>
   <p>EEE Student | IoT & Embedded Systems Enthusiast</p>
   <a href="#projects" class="btn">View Projects</a>
-  <a href="Mohan_Kumar_Resume.pdf" class="btn" download>Download Resume</a>
+  <a href="https://example.com/Mohan_Kumar_Resume.pdf" class="btn">Download Resume</a>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
   <div class="cards">
+
     <div class="card">
       <h3>Audio Amplifier Circuit with PCB</h3>
       <p><strong>Feb 2024 – Apr 2025</strong></p>
       <p>Low-noise amplifier with 20x gain and custom PCB design.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="amplifier.html" style="text-decoration: none; font-weight: 600; color: #2c2c2c;">View Details</a></div>
+      <a href="amplifier.html" class="btn">Click for more details</a>
     </div>
+
     <div class="card">
       <h3>IoT-Based Smart Water Management</h3>
       <p><strong>Mar 2025 – Apr 2025</strong></p>
       <p>ESP32 system tracks tank levels & auto-controls pump via Blynk.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="water-management.html" style="text-decoration: none; font-weight: 600; color: #2c2c2c;">View Details</a></div>
+      <a href="water-management.html" class="btn">Click for more details</a>
     </div>
+
     <div class="card">
       <h3>Remote-Controlled Agriculture Bot</h3>
       <p><strong>2025</strong></p>
       <p>ESP32 robot with ploughing, seeding, and real-time soil feedback.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="agriculture-bot.html" style="text-decoration: underline; font-weight: 600; color: #2c2c2c; transition: color 0.3s;">View Details</a></div>
+      <a href="agriculture-bot.html" class="btn">Click for more details</a>
     </div>
+
     <div class="card">
       <h3>Automatic Irrigation System</h3>
       <p><strong>2025</strong></p>
       <p>IoT system with soil moisture & temp sensors to auto-control pump.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="irrigation-system.html" style="text-decoration: underline; font-weight: 600; color: #2c2c2c; transition: color 0.3s;">View Details</a></div>
+      <a href="irrigation-system.html" class="btn">Click for more details</a>
     </div>
+
     <div class="card">
       <h3>Anti-Sleep Alarm</h3>
       <p><strong>2024</strong></p>
       <p>Arduino-based drowsiness detection using IR eye blink sensor.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="anti-sleep-alarm.html" style="text-decoration: underline; font-weight: 600; color: #2c2c2c; transition: color 0.3s;">View Details</a></div>
+      <a href="anti-sleep-alarm.html" class="btn">Click for more details</a>
     </div>
+
     <div class="card">
       <h3>Battery Monitoring System</h3>
       <p><strong>2024</strong></p>
       <p>ESP32 monitors battery stats & streams data to Blynk IoT dashboard.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="battery-monitor.html" style="text-decoration: underline; font-weight: 600; color: #2c2c2c; transition: color 0.3s;">View Details</a></div>
+      <a href="battery-monitor.html" class="btn">Click for more details</a>
     </div>
+
   </div>
 </section>
 
-<div class="social-icons">
-    <a href="https://linkedin.com/in/mohan-kumar-l-298847306" target="_blank" title="LinkedIn">🔗</a>
-    <a href="https://github.com/mohankumar1018" target="_blank" title="GitHub">💻</a>
-    <a href="mailto:mohankumarl1018@gmail.com" title="Email">📧</a>
-  </div>
+<section id="contact">
+  <h2>Contact Me</h2>
   <p>Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a></p>
   <p>
     <a href="https://linkedin.com/in/mohan-kumar-l-298847306" target="_blank">LinkedIn</a> |
