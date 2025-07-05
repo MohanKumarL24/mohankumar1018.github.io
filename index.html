@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohan Kumar L – Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
@@ -239,33 +239,99 @@
       }
     }
 
-    /* New About Section Styles */
+    /* Enhanced About Section Styles */
     #about {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .about-content {
-      background: rgba(255,255,255,0.85);
-      border-radius: 12px;
-      padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-    .about-text {
-      line-height: 1.7;
-    }
-    #about ul {
-      list-style-type: none;
-      padding-left: 1.5rem;
-    }
-    #about li {
-      margin-bottom: 0.5rem;
+      width: 100%;
+      padding: 80px 0;
+      background: rgba(255, 255, 255, 0.92);
       position: relative;
     }
-    #about li::before {
-      content: "▹";
+    
+    #about::before {
+      content: '';
       position: absolute;
-      left: -1.2rem;
-      color: #a82a00;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: linear-gradient(to right, #a82a00, #cc3300);
+    }
+    
+    .about-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    .about-image {
+      background: linear-gradient(145deg, #ff7e5f, #feb47b);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      min-height: 300px;
+    }
+    
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .about-text {
+      padding: 1rem;
+    }
+    
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+    
+    .about-skills {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .skill-tag {
+      background: #a82a00;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .skill-tag:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(168, 42, 0, 0.3);
+    }
+    
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .about-image {
+        min-height: 200px;
+      }
     }
   </style>
 </head>
@@ -292,29 +358,37 @@
   <a href="Mohan_Kumar_Resume.pdf" class="btn" download>Download Resume</a>
 </section>
 
-<!-- NEW ABOUT SECTION -->
+<!-- Enhanced About Section -->
 <section id="about">
-  <h2>About Me</h2>
-  <div class="about-content">
-    <div class="about-text">
-      <p>I'm an Electrical and Electronics Engineering student at Vidyavardhaka College of Engineering with a passion for IoT and Embedded Systems. My academic journey (CGPA 9.02/10) reflects my dedication to learning, while my projects demonstrate my ability to apply knowledge to real-world challenges.</p>
-      
-      <p>I specialize in building smart agricultural solutions and energy-efficient systems, with hands-on experience in:</p>
-      <ul>
-        <li>IoT-based automation (ESP32, Blynk)</li>
-        <li>PCB design and circuit simulation</li>
-        <li>Embedded systems programming (Arduino, Embedded C)</li>
-        <li>Battery management and power systems</li>
-      </ul>
-
-      <p>Beyond technical skills, I actively mentor peers in workshops, participate in hackathons like "Sustainable Solutions", and contribute to IEEE societies. My research on opto-dielectric nanocomposites was published in a Q1 journal, showcasing my interest in cutting-edge technology.</p>
-
-      <p>When not working on electronics, you'll find me volunteering for NSS initiatives or developing smart farming tools to support agricultural innovation.</p>
+  <div class="about-container">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-image">
+        <!-- Replace with your actual image -->
+        <img src="https://via.placeholder.com/500x300/ff7e5f/ffffff?text=Mohan+Kumar" alt="Mohan Kumar">
+      </div>
+      <div class="about-text">
+        <p>I'm an Electrical and Electronics Engineering student at Vidyavardhaka College of Engineering with a CGPA of 9.02/10. My passion lies at the intersection of IoT and Embedded Systems, where I combine technical knowledge with practical applications to solve real-world problems.</p>
+        
+        <p>My expertise spans across multiple domains of electrical engineering and computer science, with special focus on:</p>
+        
+        <div class="about-skills">
+          <span class="skill-tag">IoT Automation</span>
+          <span class="skill-tag">Embedded C</span>
+          <span class="skill-tag">PCB Design</span>
+          <span class="skill-tag">ESP32</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">Circuit Simulation</span>
+        </div>
+        
+        <p>Beyond academics, I've published research in the Journal of Alloys & Compounds (Q1) on opto-dielectric nanocomposites, demonstrating my commitment to advancing technology. I actively mentor peers through workshops and contribute to IEEE societies, believing strongly in collaborative learning.</p>
+        
+        <p>When not working on technical projects, you'll find me volunteering with NSS initiatives or developing smart farming solutions to support agricultural innovation in rural communities.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- EXISTING SECTIONS (remain unchanged) -->
 <section id="projects">
   <h2>Projects</h2>
   <div class="cards">
