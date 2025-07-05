@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mohan Kumar L – Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -23,7 +23,7 @@
       width: 100%;
       top: 0;
       z-index: 10;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
     nav ul {
       list-style: none;
@@ -73,6 +73,7 @@
       border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
+      display: inline-block;
       transition: background 0.3s;
     }
     .btn:hover {
@@ -84,48 +85,98 @@
     }
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 1.5rem;
     }
     .card {
       background: #ffffffcc;
       border-radius: 12px;
-      padding: 1.2rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card a {
+      display: inline-block;
+      margin-top: auto;
+      padding-top: 1rem;
+      text-align: right;
+      text-decoration: underline;
+      font-weight: 600;
+      color: #2c2c2c;
+      transition: color 0.3s;
+    }
+    .card a:hover {
+      color: #444;
     }
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
       gap: 1rem;
     }
     .skill {
       background: #fff;
-      padding: 0.6rem 1rem;
-      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
       text-align: center;
       font-weight: 600;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
     }
-    .extra-list, .achievements-list {
+    .skill:hover {
+      transform: scale(1.05);
+    }
+    .block-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .block {
+      background: #fff;
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .block h3 {
+      margin-top: 0;
+      color: #ff7e5f;
+    }
+    .block ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
-    .extra-list li, .achievements-list li {
-      margin-bottom: 0.8rem;
-      padding-left: 1.2rem;
+    .block li {
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
       position: relative;
     }
-    .extra-list li::before, .achievements-list li::before {
+    .block li::before {
       content: "✔";
-      color: #ff7e5f;
       position: absolute;
       left: 0;
-      top: 0;
+      color: #feb47b;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.3s ease;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
     }
     footer {
       text-align: center;
@@ -173,37 +224,37 @@
       <h3>Audio Amplifier Circuit with PCB</h3>
       <p><strong>Feb 2024 – Apr 2025</strong></p>
       <p>Low-noise amplifier with 20x gain and custom PCB design.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="amplifier.html">View More Details</a></div>
+      <a href="amplifier.html">View More Details</a>
     </div>
     <div class="card">
       <h3>IoT-Based Smart Water Management</h3>
       <p><strong>Mar 2025 – Apr 2025</strong></p>
       <p>ESP32 system tracks tank levels & auto-controls pump via Blynk.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="water-management.html">View More Details</a></div>
+      <a href="water-management.html">View More Details</a>
     </div>
     <div class="card">
       <h3>Remote-Controlled Agriculture Bot</h3>
       <p><strong>2025</strong></p>
       <p>ESP32 robot with ploughing, seeding, and real-time soil feedback.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="agriculture-bot.html">View More Details</a></div>
+      <a href="agriculture-bot.html">View More Details</a>
     </div>
     <div class="card">
       <h3>Automatic Irrigation System</h3>
       <p><strong>2025</strong></p>
       <p>IoT system with soil moisture & temp sensors to auto-control pump.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="irrigation-system.html">View More Details</a></div>
+      <a href="irrigation-system.html">View More Details</a>
     </div>
     <div class="card">
       <h3>Anti-Sleep Alarm</h3>
       <p><strong>2024</strong></p>
       <p>Arduino-based drowsiness detection using IR eye blink sensor.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="anti-sleep-alarm.html">View More Details</a></div>
+      <a href="anti-sleep-alarm.html">View More Details</a>
     </div>
     <div class="card">
       <h3>Battery Monitoring System</h3>
       <p><strong>2024</strong></p>
       <p>ESP32 monitors battery stats & streams data to Blynk IoT dashboard.</p>
-      <div style="text-align: right; margin-top: 1rem;"><a href="battery-monitor.html">View More Details</a></div>
+      <a href="battery-monitor.html">View More Details</a>
     </div>
   </div>
 </section>
@@ -250,35 +301,48 @@
 
 <section id="achievements">
   <h2>Achievements</h2>
-  <ul class="achievements-list">
-    <li>🥇 Secured 1st Rank in 4th semester with SGPA 9.6</li>
-    <li>🏅 Secured 4th Rank in 3rd semester with SGPA 8.80</li>
-    <li>🏆 Won 1st Prize in state-level project competition “Vriddheee” (Mini Project category)</li>
-    <li>🏅 Awarded Best Student for Co-Curricular Activities, 2025</li>
-  </ul>
+  <div class="block-section">
+    <div class="block">
+      <h3>Highlights</h3>
+      <ul>
+        <li>🥇 Secured 1st Rank in 4th semester with SGPA 9.6</li>
+        <li>🏅 Secured 4th Rank in 3rd semester with SGPA 8.80</li>
+        <li>🏆 Won 1st Prize in state-level project competition “Vriddheee”</li>
+        <li>🏅 Best Student for Co-Curricular Activities, 2025</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section id="extra">
   <h2>Extra-Curricular Activities</h2>
-  <h3>Volunteer</h3>
-  <ul class="extra-list">
-    <li>7-day NSS Camp, Ramanahalli – 2024</li>
-    <li>National Level NSS Hackathon “Haxerve 2.0” – 2025</li>
-    <li>7-day Faculty Development Program – 2024 & 2025</li>
-    <li>State level Hackathon “Sustainable Solutions For Smart Campus” – 2024</li>
-  </ul>
-  <h3>Memberships</h3>
-  <ul class="extra-list">
-    <li>Active Member, VVCE-BAJA (Electrical Powertrain Group) – 2025</li>
-    <li>Active Member, IEEE PES and PELS Society – 2024–2026</li>
-  </ul>
-  <h3>Mentorship</h3>
-  <ul class="extra-list">
-    <li>Embedded System Simulation Workshop, VVCE – May 2024</li>
-    <li>Basic Electrical Workshop for First Year Students – 2024</li>
-    <li>Hands-on Workshop on PCB Design using KiCad – 2023</li>
-    <li>“Build Your Own Robot” Workshop – 2024</li>
-  </ul>
+  <div class="block-section">
+    <div class="block">
+      <h3>Volunteer</h3>
+      <ul>
+        <li>7-day NSS Camp, Ramanahalli – 2024</li>
+        <li>National Level NSS Hackathon “Haxerve 2.0” – 2025</li>
+        <li>Faculty Development Program – 2024 & 2025</li>
+        <li>Hackathon “Sustainable Solutions” – 2024</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h3>Memberships</h3>
+      <ul>
+        <li>VVCE-BAJA (Electrical Powertrain Group) – 2025</li>
+        <li>IEEE PES and PELS Society – 2024–2026</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h3>Mentorship</h3>
+      <ul>
+        <li>Embedded System Workshop – May 2024</li>
+        <li>Basic Electrical Workshop – 2024</li>
+        <li>PCB Design Workshop – 2023</li>
+        <li>“Build Your Own Robot” Workshop – 2024</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
