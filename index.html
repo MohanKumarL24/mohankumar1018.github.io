@@ -389,14 +389,46 @@
     font-size: 1rem;
   }
 }
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 0.3rem 0;
+  }
+}
 
   </style>
 </head>
 <body>
 
 <nav>
-  <div><strong>Mohan Kumar L</strong></div>
-  <ul>
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+  <ul id="nav-links">
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -407,6 +439,7 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
+
 
 <section id="hero">
   <h1>Hi, I'm Mohan Kumar L</h1>
@@ -612,6 +645,12 @@
   sections.forEach(section => {
     observer.observe(section);
   });
+</script>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("show");
+  }
 </script>
 
 </body>
