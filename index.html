@@ -449,6 +449,19 @@ nav ul.show {
 }
 
 @media (min-width: 769px) {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
   .menu-toggle {
     display: none;
   }
@@ -456,9 +469,24 @@ nav ul.show {
   #nav-links {
     display: flex !important;
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #nav-links li a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #2c2c2c;
+  }
+
+  #nav-links li a:hover {
+    color: #ff7e5f;
   }
 }
+
 .nav-container {
   display: flex;
   justify-content: space-between;
