@@ -680,6 +680,23 @@ nav ul.show {
     nav.classList.toggle("show");
   }
 </script>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("nav-links");
+    nav.classList.toggle("show");
+  }
+
+  // Auto-close menu on link click
+  document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll("#nav-links a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        const nav = document.getElementById("nav-links");
+        nav.classList.remove("show");
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
