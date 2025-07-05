@@ -239,7 +239,7 @@
       }
     }
 
-    /* Enhanced About Section with Profile Image */
+    /* Enhanced About Section Styles */
     #about {
       width: 100%;
       padding: 80px 0;
@@ -271,26 +271,22 @@
     }
     
     .about-image {
+      background: linear-gradient(145deg, #ff7e5f, #feb47b);
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    
-    .profile-circle {
-      width: 280px;
-      height: 280px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 8px solid #feb47b;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      position: relative;
-    }
-    
-    .profile-circle img {
-      width: 100%;
       height: 100%;
-      object-fit: cover;
-      object-position: center 25%;
+      min-height: 300px;
+    }
+    
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     
     .about-text {
@@ -333,10 +329,8 @@
         grid-template-columns: 1fr;
       }
       
-      .profile-circle {
-        width: 220px;
-        height: 220px;
-        margin: 0 auto;
+      .about-image {
+        min-height: 200px;
       }
     }
   </style>
@@ -364,42 +358,187 @@
   <a href="Mohan_Kumar_Resume.pdf" class="btn" download>Download Resume</a>
 </section>
 
-<!-- About Section with Profile Image -->
+<!-- Enhanced About Section -->
 <section id="about">
   <div class="about-container">
     <h2>About Me</h2>
     <div class="about-content">
       <div class="about-image">
-        <div class="profile-circle">
-          <!-- Your profile image (directly in repository) -->
-          <img src="profile.jpg" alt="Mohan Kumar - Electrical Engineering Student">
-        </div>
+        <!-- Replace with your actual image -->
+        <img src="https://via.placeholder.com/500x300/ff7e5f/ffffff?text=Mohan+Kumar" alt="Mohan Kumar">
       </div>
       <div class="about-text">
-        <p>I'm an Electrical and Electronics Engineering student at Vidyavardhaka College of Engineering with a CGPA of 9.02/10. My passion lies in IoT and Embedded Systems, where I combine my EEE expertise with practical applications to develop innovative solutions for real-world challenges.</p>
+        <p>I'm an Electrical and Electronics Engineering student at Vidyavardhaka College of Engineering with a CGPA of 9.02/10. My passion lies at the intersection of IoT and Embedded Systems, where I combine technical knowledge with practical applications to solve real-world problems.</p>
         
-        <p>My technical focus includes:</p>
+        <p>My expertise spans across multiple domains of electrical engineering and computer science, with special focus on:</p>
         
         <div class="about-skills">
-          <span class="skill-tag">Embedded Systems</span>
-          <span class="skill-tag">Circuit Design</span>
           <span class="skill-tag">IoT Automation</span>
-          <span class="skill-tag">PCB Development</span>
-          <span class="skill-tag">Electrical Machines</span>
-          <span class="skill-tag">MATLAB Simulation</span>
+          <span class="skill-tag">Embedded C</span>
+          <span class="skill-tag">PCB Design</span>
+          <span class="skill-tag">ESP32</span>
+          <span class="skill-tag">MATLAB</span>
+          <span class="skill-tag">Circuit Simulation</span>
         </div>
         
-        <p>My research in opto-dielectric nanocomposites (published in Journal of Alloys & Compounds) demonstrates my ability to bridge theoretical knowledge with practical applications. I actively contribute to IEEE societies and mentor peers through technical workshops, believing in the power of collaborative learning.</p>
+        <p>Beyond academics, I've published research in the Journal of Alloys & Compounds (Q1) on opto-dielectric nanocomposites, demonstrating my commitment to advancing technology. I actively mentor peers through workshops and contribute to IEEE societies, believing strongly in collaborative learning.</p>
         
-        <p>Beyond academics, I develop smart agricultural solutions to address real farming challenges, combining my technical skills with my interest in sustainable technology.</p>
+        <p>When not working on technical projects, you'll find me volunteering with NSS initiatives or developing smart farming solutions to support agricultural innovation in rural communities.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- [Rest of your existing sections...] -->
-<!-- Projects, Education, Skills, Achievements, Activities, Contact sections -->
-<!-- ... -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Audio Amplifier Circuit with PCB</h3>
+      <p><strong>Feb 2024 – Apr 2025</strong></p>
+      <p>Low-noise amplifier with 20x gain and custom PCB design.</p>
+      <a href="amplifier.html">View More Details</a>
+    </div>
+    <div class="card">
+      <h3>IoT-Based Smart Water Management</h3>
+      <p><strong>Mar 2025 – Apr 2025</strong></p>
+      <p>ESP32 system tracks tank levels & auto-controls pump via Blynk.</p>
+      <a href="water-management.html">View More Details</a>
+    </div>
+    <div class="card">
+      <h3>Remote-Controlled Agriculture Bot</h3>
+      <p><strong>2025</strong></p>
+      <p>ESP32 robot with ploughing, seeding, and real-time soil feedback.</p>
+      <a href="agriculture-bot.html">View More Details</a>
+    </div>
+    <div class="card">
+      <h3>Automatic Irrigation System</h3>
+      <p><strong>2025</strong></p>
+      <p>IoT system with soil moisture & temp sensors to auto-control pump.</p>
+      <a href="irrigation-system.html">View More Details</a>
+    </div>
+    <div class="card">
+      <h3>Anti-Sleep Alarm</h3>
+      <p><strong>2024</strong></p>
+      <p>Arduino-based drowsiness detection using IR eye blink sensor.</p>
+      <a href="anti-sleep-alarm.html">View More Details</a>
+    </div>
+    <div class="card">
+      <h3>Battery Monitoring System</h3>
+      <p><strong>2024</strong></p>
+      <p>ESP32 monitors battery stats & streams data to Blynk IoT dashboard.</p>
+      <a href="battery-monitor.html">View More Details</a>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>B.E., Electrical and Electronics Engineering</h3>
+      <p>Vidyavardhaka College of Engineering, 2022–2026</p>
+      <p>CGPA: 8.98/10</p>
+    </div>
+    <div class="card">
+      <h3>Senior Secondary (XII), Science</h3>
+      <p>Sadvidya Composite PU College, Mysuru, 2019–2021</p>
+      <p>Percentage: 90.84%</p>
+    </div>
+    <div class="card">
+      <h3>Secondary (X)</h3>
+      <p>Govt Adarsha Vidyalaya Sosale, 2014–2019</p>
+      <p>Percentage: 91.84%</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">Arduino</div>
+    <div class="skill">Proteus Design Suite</div>
+    <div class="skill">Embedded C</div>
+    <div class="skill">ESP32</div>
+    <div class="skill">Electrical Machines</div>
+    <div class="skill">Circuit Design</div>
+    <div class="skill">BMS Modelling & Simulation</div>
+    <div class="skill">MATLAB</div>
+    <div class="skill">PCB Design</div>
+    <div class="skill">Internet of Things (IoT)</div>
+    <div class="skill">C Programming</div>
+    <div class="skill">Embedded Systems</div>
+    <div class="skill">Problem Solving</div>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements</h2>
+  <div class="block-section">
+    <div class="block">
+      <h3>Highlights</h3>
+      <ul>
+        <li>🥇 Secured 1st Rank in 4th semester with SGPA 9.6</li>
+        <li>🏅 Secured 4th Rank in 3rd semester with SGPA 8.80</li>
+        <li>🏆 Won 1st Prize in state-level project competition "Vriddheee"</li>
+        <li>🏅 Best Student for Co-Curricular Activities, 2025</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="extra">
+  <h2>Extra-Curricular Activities</h2>
+  <div class="block-section">
+    <div class="block">
+      <h3>Volunteer</h3>
+      <ul>
+        <li>7-day NSS Camp, Ramanahalli – 2024</li>
+        <li>National Level NSS Hackathon "Haxerve 2.0" – 2025</li>
+        <li>Faculty Development Program – 2024 & 2025</li>
+        <li>Hackathon "Sustainable Solutions" – 2024</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h3>Memberships</h3>
+      <ul>
+        <li>VVCE-BAJA (Electrical Powertrain Group) – 2025</li>
+        <li>IEEE PES and PELS Society – 2024–2026</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h3>Mentorship</h3>
+      <ul>
+        <li>Embedded System Workshop – May 2024</li>
+        <li>Basic Electrical Workshop – 2024</li>
+        <li>PCB Design Workshop – 2023</li>
+        <li>"Build Your Own Robot" Workshop – 2024</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="social-icons">
+    <a href="https://linkedin.com/in/mohan024" target="_blank" title="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/mohankumar1018" target="_blank" title="GitHub">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+    </a>
+    <a href="mailto:mohankumarl1018@gmail.com" title="Email">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Gmail">
+    </a>
+  </div>
+  <div class="contact-info">
+    <p>Email: <a href="mailto:mohankumarl1018@gmail.com">mohankumarl1018@gmail.com</a></p>
+    <p>Phone: <a href="tel:+918494867375">+91-8494867375</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Mohan Kumar L. All rights reserved.
+</footer>
 
 <script>
   const sections = document.querySelectorAll('section');
