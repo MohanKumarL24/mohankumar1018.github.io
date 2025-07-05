@@ -79,8 +79,6 @@
     .btn:hover {
       background: #f1f1f1;
     }
-
-    /* UPDATED HEADING STYLES (ONLY COLOR CHANGED) */
     h2 {
       font-size: 1.8rem;
       margin-bottom: 1.2rem;
@@ -106,7 +104,8 @@
     #achievements h2,
     #extra h2,
     #skills h2,
-    #contact h2 {
+    #contact h2,
+    #about h2 {
       color: #a82a00;
     }
     #contact h2 {
@@ -118,8 +117,6 @@
       border-left: 4px solid #a82a00;
       padding-left: 0.8rem;
     }
-
-    /* REST OF THE ORIGINAL STYLES UNCHANGED */
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -241,15 +238,44 @@
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       }
     }
+
+    /* New About Section Styles */
+    #about {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .about-content {
+      background: rgba(255,255,255,0.85);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .about-text {
+      line-height: 1.7;
+    }
+    #about ul {
+      list-style-type: none;
+      padding-left: 1.5rem;
+    }
+    #about li {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+    #about li::before {
+      content: "▹";
+      position: absolute;
+      left: -1.2rem;
+      color: #a82a00;
+    }
   </style>
 </head>
 <body>
 
-<!-- ALL ORIGINAL CONTENT REMAINS EXACTLY THE SAME -->
 <nav>
   <div><strong>Mohan Kumar L</strong></div>
   <ul>
     <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -266,6 +292,29 @@
   <a href="Mohan_Kumar_Resume.pdf" class="btn" download>Download Resume</a>
 </section>
 
+<!-- NEW ABOUT SECTION -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <p>I'm an Electrical and Electronics Engineering student at Vidyavardhaka College of Engineering with a passion for IoT and Embedded Systems. My academic journey (CGPA 9.02/10) reflects my dedication to learning, while my projects demonstrate my ability to apply knowledge to real-world challenges.</p>
+      
+      <p>I specialize in building smart agricultural solutions and energy-efficient systems, with hands-on experience in:</p>
+      <ul>
+        <li>IoT-based automation (ESP32, Blynk)</li>
+        <li>PCB design and circuit simulation</li>
+        <li>Embedded systems programming (Arduino, Embedded C)</li>
+        <li>Battery management and power systems</li>
+      </ul>
+
+      <p>Beyond technical skills, I actively mentor peers in workshops, participate in hackathons like "Sustainable Solutions", and contribute to IEEE societies. My research on opto-dielectric nanocomposites was published in a Q1 journal, showcasing my interest in cutting-edge technology.</p>
+
+      <p>When not working on electronics, you'll find me volunteering for NSS initiatives or developing smart farming tools to support agricultural innovation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXISTING SECTIONS (remain unchanged) -->
 <section id="projects">
   <h2>Projects</h2>
   <div class="cards">
