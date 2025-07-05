@@ -79,12 +79,63 @@
     .btn:hover {
       background: #f1f1f1;
     }
+    
+    /* Updated Heading Styles */
     h2 {
       font-size: 1.8rem;
       margin-bottom: 1.2rem;
       text-align: center;
-      color: #ff7e5f;
+      color: #2c2c2c;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      padding-bottom: 0.5rem;
     }
+    h2::after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      bottom: 0;
+      left: 25%;
+      background: linear-gradient(to right, #0066cc, #00ccff);
+      border-radius: 3px;
+    }
+    #projects h2 {
+      color: #0066cc;
+    }
+    #education h2 {
+      color: #009933;
+    }
+    #achievements h2 {
+      color: #cc3300;
+    }
+    #extra h2 {
+      color: #663399;
+    }
+    #contact h2 {
+      color: #006666;
+      font-size: 2rem;
+    }
+    .block h3 {
+      margin-top: 0;
+      color: inherit;
+      border-left: 4px solid;
+      padding-left: 0.8rem;
+    }
+    #projects .block h3 {
+      border-left-color: #0066cc;
+    }
+    #education .block h3 {
+      border-left-color: #009933;
+    }
+    #achievements .block h3 {
+      border-left-color: #cc3300;
+    }
+    #extra .block h3 {
+      border-left-color: #663399;
+    }
+    
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -149,10 +200,6 @@
       transform: scale(1.03);
       box-shadow: 0 8px 25px rgba(0,0,0,0.2);
     }
-    .block h3 {
-      margin-top: 0;
-      color: #ff7e5f;
-    }
     .block ul {
       list-style: none;
       padding: 0;
@@ -168,11 +215,6 @@
       position: absolute;
       left: 0;
       color: #feb47b;
-    }
-    #contact h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #ff7e5f;
     }
     .social-icons {
       display: flex;
@@ -329,7 +371,7 @@
       <ul>
         <li>🥇 Secured 1st Rank in 4th semester with SGPA 9.6</li>
         <li>🏅 Secured 4th Rank in 3rd semester with SGPA 8.80</li>
-        <li>🏆 Won 1st Prize in state-level project competition “Vriddheee”</li>
+        <li>🏆 Won 1st Prize in state-level project competition "Vriddheee"</li>
         <li>🏅 Best Student for Co-Curricular Activities, 2025</li>
       </ul>
     </div>
@@ -343,9 +385,9 @@
       <h3>Volunteer</h3>
       <ul>
         <li>7-day NSS Camp, Ramanahalli – 2024</li>
-        <li>National Level NSS Hackathon “Haxerve 2.0” – 2025</li>
+        <li>National Level NSS Hackathon "Haxerve 2.0" – 2025</li>
         <li>Faculty Development Program – 2024 & 2025</li>
-        <li>Hackathon “Sustainable Solutions” – 2024</li>
+        <li>Hackathon "Sustainable Solutions" – 2024</li>
       </ul>
     </div>
     <div class="block">
@@ -361,7 +403,7 @@
         <li>Embedded System Workshop – May 2024</li>
         <li>Basic Electrical Workshop – 2024</li>
         <li>PCB Design Workshop – 2023</li>
-        <li>“Build Your Own Robot” Workshop – 2024</li>
+        <li>"Build Your Own Robot" Workshop – 2024</li>
       </ul>
     </div>
   </div>
