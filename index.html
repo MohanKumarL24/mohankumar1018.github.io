@@ -339,6 +339,57 @@
         margin: 0 auto;
       }
     }
+     @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-circle {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  section {
+    padding: 120px 1rem 60px;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .block-section {
+    grid-template-columns: 1fr;
+  }
+
+  .about-skills {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    font-size: 1rem;
+  }
+}
+
   </style>
 </head>
 <body>
