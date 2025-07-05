@@ -11,6 +11,7 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(to right, #ff7e5f, #feb47b);
       color: #2c2c2c;
+      scroll-behavior: smooth;
     }
     nav {
       display: flex;
@@ -30,6 +31,7 @@
       gap: 1rem;
       margin: 0;
       padding: 0;
+      flex-wrap: wrap;
     }
     nav a {
       text-decoration: none;
@@ -38,6 +40,13 @@
     }
     section {
       padding: 140px 2rem 80px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     #hero {
       background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1950&q=80');
@@ -49,11 +58,11 @@
       text-shadow: 1px 1px 4px #000;
     }
     #hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 0.5rem;
     }
     #hero p {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
     .btn {
       margin: 1rem 0.5rem;
@@ -69,15 +78,19 @@
     .btn:hover {
       background: #f1f1f1;
     }
-    #projects .cards {
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
     }
     .card {
       background: #ffffffcc;
       border-radius: 12px;
-      padding: 1.5rem;
+      padding: 1.2rem;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -85,32 +98,49 @@
       transform: translateY(-6px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
-    .card a {
-      text-decoration: underline;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+    .skill {
+      background: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      text-align: center;
       font-weight: 600;
-      color: #2c2c2c;
-      transition: color 0.3s;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .card a:hover {
-      color: #444;
+    .extra-list, .achievements-list {
+      list-style: none;
+      padding: 0;
     }
-    .social-icons {
-      font-size: 1.5rem;
-      margin-top: 1rem;
+    .extra-list li, .achievements-list li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.2rem;
+      position: relative;
     }
-    .social-icons a {
-      margin: 0 0.5rem;
-      color: #2c2c2c;
-    }
-    .social-icons img {
-      width: 30px;
-      height: 30px;
-      vertical-align: middle;
+    .extra-list li::before, .achievements-list li::before {
+      content: "✔";
+      color: #ff7e5f;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem;
       background: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      #hero h1 {
+        font-size: 1.8rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
     }
   </style>
 </head>
@@ -121,6 +151,10 @@
   <ul>
     <li><a href="#hero">Home</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+    <li><a href="#extra">Activities</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -174,6 +208,79 @@
   </div>
 </section>
 
+<section id="education">
+  <h2>Education</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>B.E., Electrical and Electronics Engineering</h3>
+      <p>Vidyavardhaka College of Engineering, 2022–2026</p>
+      <p>CGPA: 8.98/10</p>
+    </div>
+    <div class="card">
+      <h3>Senior Secondary (XII), Science</h3>
+      <p>Sadvidya Composite PU College, Mysuru, 2019–2021</p>
+      <p>Percentage: 90.84%</p>
+    </div>
+    <div class="card">
+      <h3>Secondary (X)</h3>
+      <p>Govt Adarsha Vidyalaya Sosale, 2014–2019</p>
+      <p>Percentage: 91.84%</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">Arduino</div>
+    <div class="skill">Proteus Design Suite</div>
+    <div class="skill">Embedded C</div>
+    <div class="skill">ESP32</div>
+    <div class="skill">Electrical Machines</div>
+    <div class="skill">Circuit Design</div>
+    <div class="skill">BMS Modelling & Simulation</div>
+    <div class="skill">MATLAB</div>
+    <div class="skill">PCB Design</div>
+    <div class="skill">Internet of Things (IoT)</div>
+    <div class="skill">C Programming</div>
+    <div class="skill">Embedded Systems</div>
+    <div class="skill">Problem Solving</div>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements</h2>
+  <ul class="achievements-list">
+    <li>🥇 Secured 1st Rank in 4th semester with SGPA 9.6</li>
+    <li>🏅 Secured 4th Rank in 3rd semester with SGPA 8.80</li>
+    <li>🏆 Won 1st Prize in state-level project competition “Vriddheee” (Mini Project category)</li>
+    <li>🏅 Awarded Best Student for Co-Curricular Activities, 2025</li>
+  </ul>
+</section>
+
+<section id="extra">
+  <h2>Extra-Curricular Activities</h2>
+  <h3>Volunteer</h3>
+  <ul class="extra-list">
+    <li>7-day NSS Camp, Ramanahalli – 2024</li>
+    <li>National Level NSS Hackathon “Haxerve 2.0” – 2025</li>
+    <li>7-day Faculty Development Program – 2024 & 2025</li>
+    <li>State level Hackathon “Sustainable Solutions For Smart Campus” – 2024</li>
+  </ul>
+  <h3>Memberships</h3>
+  <ul class="extra-list">
+    <li>Active Member, VVCE-BAJA (Electrical Powertrain Group) – 2025</li>
+    <li>Active Member, IEEE PES and PELS Society – 2024–2026</li>
+  </ul>
+  <h3>Mentorship</h3>
+  <ul class="extra-list">
+    <li>Embedded System Simulation Workshop, VVCE – May 2024</li>
+    <li>Basic Electrical Workshop for First Year Students – 2024</li>
+    <li>Hands-on Workshop on PCB Design using KiCad – 2023</li>
+    <li>“Build Your Own Robot” Workshop – 2024</li>
+  </ul>
+</section>
+
 <section id="contact">
   <h2>Contact Me</h2>
   <div class="social-icons">
@@ -193,6 +300,21 @@
 <footer>
   © 2025 Mohan Kumar L. All rights reserved.
 </footer>
+
+<script>
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
 
 </body>
 </html>
