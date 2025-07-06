@@ -483,6 +483,21 @@ nav ul.show {
   </style>
 </head>
 <body>
+  <nav class="navbar">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="nav-name">Mohan Kumar L.</div>
+
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -922,7 +937,76 @@ nav ul {
 nav ul.show {
   max-height: 500px; /* Expandable height for visible menu */
 }
+/* Navbar base */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #4b6cb7, #182848);
+  padding: 10px 20px;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
+/* Brand name */
+.nav-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Menu toggle button */
+.menu-toggle {
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Nav links list */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: #182848;
+    display: none;
+    padding: 20px;
+    border-top: 2px solid #4b6cb7;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    order: -1; /* Move menu icon to left */
+  }
+}
   </style>
 </head>
 <body>
@@ -1178,6 +1262,12 @@ nav ul.show {
       });
     });
   });
+</script>
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("show");
+  }
 </script>
 
 </body>
